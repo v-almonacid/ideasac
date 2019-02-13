@@ -1,10 +1,13 @@
 # IdeasAC
+
+![alt text](https://github.com/v-almonacid/ideasac/blob/master/images/screenshot.png)
+
 ideasAC was a proof-of-concept that I developed in 2014 as a part of wikiAC,
 a project that intended to re-write the Chilean Constitution through a
 crowdsourcing platform (somewhat similar to the Wikipedia).
 
-The ideasAC PoC was a less ambitious side-project. It basically encourages
-people to post their ideas and proposals for a new constitution using the
+The ideasAC PoC was a less ambitious side-project. It basically relies on
+people posting their ideas and proposals for a new constitution using the
 hashtag #ideasAC on Twitter. The web backend would then track these tweets
 and publish them on the site ideas.wikiac.cl, where people could also vote for
 the ideas they support. The backend would also check the content of each tweet
@@ -15,12 +18,19 @@ WikiAC and ideasAC were both initiatives created to support the Chilean social
 movements advocating for a new constitution that would replace the one written
 during the dictatorship of Augusto Pinochet.
 
-DISCLAIMER: this was only a proof-of-concept and is not ready for production.
-The project is not under development anymore. Also, this was one of my first
-full-stack web projects so expect a messy, buggy code.
+**DISCLAIMER**: this was only a proof-of-concept and is not ready for production.
+The project is not under development anymore and uses outdated dependencies.
+Also, this was one of my first full-stack web projects so expect a messy,
+buggy code.
 
 ## Stack Overview
-Build using PHP, the Slim microframework, MySQL and the ORM RedBeanPHP.
+This project was built using:
+  - PHP 5.3.10
+  - Slim microframework 2.42
+  - MySQL 5.5.x
+  - Ubuntu 12.04 LAMP environment
+  - ReadBeanPHP 4.03
+  - TwitterOAuth v0.2.0-beta2
 
 ## Setup
 This project has been tested in a classic Ubuntu LAMP environment (recently
@@ -29,11 +39,11 @@ follow the next steps.
 
 ### 1. Get Access to the Twitter API
 Setup a twitter account and get the tokens required to get access to the public
-API (see [https://dev.twitter.com/apps]). Add these tokens in `/inc/config.php`.
+API (see https://dev.twitter.com/apps). Add these tokens in `/inc/config.php`.
 
 ### 2. Clone this repo
 ```
-git clone ...
+git clone https://github.com/v-almonacid/ideasac.git
 ```
 ### 3. Apache conf
 The Slim microframework requires to override some Apache directives, so make
