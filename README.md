@@ -75,3 +75,9 @@ and password)
 ### 6. Test
 You may check if your database and ORM are working properly by visiting
 `<your_url>/inc/usuarioTest.php`.
+
+### 7. Retrieve tweets and store them in the Data base
+The script `remoteLoadTweets.php` queries twitter's API in order to find new
+tweets using a given hashtag (which is defined in `inc/config.php`).
+You can setup a simple cron job to do this regularly and keep the database
+up-to-date.
